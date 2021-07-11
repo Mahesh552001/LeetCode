@@ -1,0 +1,1 @@
+select ifnull(max(Salary),null) as SecondHighestSalary from Employee where Salary<(select max(Salary) from Employee)

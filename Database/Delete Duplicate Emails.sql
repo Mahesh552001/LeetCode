@@ -1,0 +1,1 @@
+delete from Person where Id not in (select ID from (select min(Id) as ID from Person group by Email) as temp)

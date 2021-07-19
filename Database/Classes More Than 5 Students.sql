@@ -1,0 +1,1 @@
+select class from (select distinct student,class from courses) as temp group by class having count(student)>=5

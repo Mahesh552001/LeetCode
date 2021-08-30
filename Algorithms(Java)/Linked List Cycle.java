@@ -23,3 +23,20 @@ public class Solution {
         return false;
     }
 }
+
+//or
+
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+        HashSet<ListNode> h =new HashSet<ListNode>();
+        ListNode temp=head;
+        while(temp!=null){
+            if (h.contains(temp)){
+                return true;
+            }
+            h.add(temp);
+            temp=temp.next;
+        }
+        return false;
+    }
+}

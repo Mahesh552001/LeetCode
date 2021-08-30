@@ -35,3 +35,20 @@ public class Solution {
         }
     }
 }
+
+//or
+
+public class Solution {
+    public ListNode detectCycle(ListNode head) {
+        HashSet<ListNode> h=new HashSet<ListNode>();
+        ListNode temp=head;
+        while(temp!=null){
+            if (h.contains(temp)){
+                return temp;
+            }
+            h.add(temp);
+            temp=temp.next;
+        }
+        return null;
+    }
+}

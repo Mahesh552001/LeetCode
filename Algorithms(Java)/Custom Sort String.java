@@ -18,7 +18,7 @@
             }
             i++;
         }
-        for(Map.Entry entry:map.entrySet()){
+        for(Map.Entry<Character,Integer> entry:map.entrySet()){
             for(int i=0;i<entry.getValue();i++){
                 ans+=entry.getKey();
             }
